@@ -100,8 +100,7 @@ public:
       this->precice->add_write_surface(
         this->application->structure->get_boundary_descriptor()->neumann_cached_bc.begin()->first,
         this->precice_parameters.write_mesh_name,
-        {this->precice_parameters.displacement_data_name,
-         this->precice_parameters.velocity_data_name},
+        {this->precice_parameters.displacement_data_name},
         this->precice_parameters.write_data_type,
         structure->matrix_free,
         structure->pde_operator->get_dof_index(),
@@ -255,13 +254,12 @@ private:
   }
 
   void
-  coupling_structure_to_fluid(VectorType const & velocity_structure,
-                              double const       time_step_size) const
+  coupling_structure_to_fluid(VectorType const &, double const) const
   {
-    this->precice->write_data(this->precice_parameters.write_mesh_name,
-                              this->precice_parameters.velocity_data_name,
-                              velocity_structure,
-                              time_step_size);
+    // this->precice->write_data(this->precice_parameters.write_mesh_name,
+    //                           this->precice_parameters.velocity_data_name,
+    //                           velocity_structure,
+    //                           time_step_size);
   }
 
   void
