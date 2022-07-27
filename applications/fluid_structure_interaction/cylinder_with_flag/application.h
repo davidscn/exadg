@@ -85,7 +85,7 @@ bool STRUCTURE_COVERS_FLAG_ONLY = true;
 unsigned int N_CELLS_FLAG_X = 16;
 
 double const U_X_MAX  = 1.5 * U_MEAN;
-double const END_TIME = 4.0 * L / U_MEAN;
+double const END_TIME = 15;
 
 double const       OUTPUT_INTERVAL_TIME                = END_TIME / 600;
 unsigned int const OUTPUT_SOLVER_INFO_EVERY_TIME_STEPS = 1e2;
