@@ -2,9 +2,9 @@ name: GitHub preCICE CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ fsi-setups ]
   pull_request:
-    branches: [ master ]
+    branches: [ fsi-setups ]
   schedule:
     - cron: '0 8 * * 2'  # run once in a week (here Tue at 8am)
 
